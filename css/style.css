@@ -360,3 +360,14 @@ img {
     height: 22px;
     object-fit: contain;
 }
+
+.map-box {
+    width: 100%;
+    overflow: hidden;
+}
+
+.map-box iframe {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 16px;
+}
