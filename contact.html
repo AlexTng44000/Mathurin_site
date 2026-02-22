@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact — Garage Mathurin DURAND</title>
+    <meta name="description"
+        content="Contactez le Garage Mathurin DURAND à Saint-Urbain. Demande de devis et rendez-vous." />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/contact.css" />
+    <script defer src="./js/contact.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header__inner">
+            <a class="logo" href="./index.html">Garage <span>Mathurin DURAND</span></a>
+            <nav class="nav">
+                <a href="./index.html#services">Services</a>
+                <a href="./index.html#realisations">Photos</a>
+                <a href="./index.html#infos">Infos</a>
+                <a class="btn btn--small" href="./contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="section">
+        <div class="container contact-grid">
+            <div>
+                <h1>Contact</h1>
+                <p class="muted">Réponse rapide. Décris le souci et le véhicule.</p>
+
+                <div class="contact-cards">
+                    <div class="card">
+                        <h3>Téléphone</h3>
+                        <p><a href="tel:+330613998336">+33 06 13 99 83 36</a></p>
+                    </div>
+                    <div class="card">
+                        <h3>Adresse</h3>
+                        <p>4 Rue des Hautes Rouches, 85230 Saint-Urbain</p>
+                    </div>
+                    <div class="card">
+                        <h3>Horaires</h3>
+                        <p>Lun–Ven : 8h30–18h30<br />Sam : 9h–12h</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-wrap">
+                <form id="contactForm" class="form" novalidate>
+                    <div class="field">
+                        <label for="name">Nom</label>
+                        <input id="name" name="name" type="text" autocomplete="name" required />
+                        <small class="error" data-error-for="name"></small>
+                    </div>
+
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" autocomplete="email" required />
+                        <small class="error" data-error-for="email"></small>
+                    </div>
+
+                    <div class="field">
+                        <label for="phone">Téléphone</label>
+                        <input id="phone" name="phone" type="tel" autocomplete="tel" />
+                        <small class="error" data-error-for="phone"></small>
+                    </div>
+
+                    <div class="field">
+                        <label for="car">Véhicule (optionnel)</label>
+                        <input id="car" name="car" type="text" placeholder="Ex: Peugeot 208 2021" />
+                    </div>
+
+                    <div class="field">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" required
+                            placeholder="Ex: bruit au freinage, voyant moteur, etc."></textarea>
+                        <small class="error" data-error-for="message"></small>
+                    </div>
+
+                    <button class="btn" type="submit">Envoyer</button>
+                    <p class="muted small" id="formStatus" aria-live="polite"></p>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__inner">
+            <p>© <span id="year"></span> Garage Mathurin DURAND.</p>
+            <p class="muted"><a href="./index.html">Accueil</a></p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
